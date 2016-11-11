@@ -4,7 +4,11 @@
   "version": "0.0.1",
   "private": true,
   "hexo": {
-    "version": "3.2.0"
+    "version": "3.2.2"
+  },
+  "scripts": {
+    "prestart": "cd themes/five && npm run build && cd ../../ && hexo clean && hexo generate",
+    "start": "gulp"
   },
   "dependencies": {
     "hexo": "^3.2.0",
@@ -21,5 +25,12 @@
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-ruby-character": "^1.0.6",
     "hexo-server": "^0.2.0"
+  },
+  "devDependencies": {
+    "gulp-clean": "^0.3.2",
+    "gulp-scp": "^0.0.3",
+    "gulp-ssh": "^0.6.0",
+    "gulp-zip": "^3.2.0",
+    "run-sequence": "^1.2.2"
   }
 }

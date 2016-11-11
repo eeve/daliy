@@ -16,7 +16,6 @@ categories:
 其实翻墙无非就是使用代理服务器，利用一台没有被墙的、并且能够自由访问互联网的机器来上网。
 {% asset_img 350px-Schematic_Proxy_Server.png 350px-Schematic_Proxy_Server.png %}
 > 图解：左边和右边的电脑在通讯时候，需要经过中间的电脑中转，而中间的那部电脑就是代理服务器。
-> 图片，文字引用自：https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8
 
 
 代理服务器根据协议来区分的话，一般分为以下几种：
@@ -35,5 +34,39 @@ categories:
 
 
 
-我们必须利用其中一种代理方式来实现在iPhone上科学上网，目前iPhone还不支持SOCKS这种方式，所以这个就不能使用了，除了SOCKS，用的最多的就是HTTP协议代理。
+我们必须利用其中一种代理方式来实现在iPhone上科学上网，目前iPhone支持HTTP与SOCKS这种方式。
+
+> 注意：在iPhone设备的 `设置` -> `无线局域网` 的详情下只能看到`HTTP代理`，并且可以看到iPhone的HTTP代理支持两种模式，即：手动，自动。如下图：
+{% asset_img iphone-settings-wlan-detail.png %}
+
+## SOCKS代理配置方法
+
+想用SOCKS代理协议，请将HTTP代理模式设置为`自动`
+
+```javascript
+function FindProxyForURL(url, host) {
+    // 局域网流量不走代理
+    if (isInNet(host, "192.168.1.0", "255.255.255.0"))
+        return "DIRECT";
+    // 其他使用SOCKS代理
+    return "SOCKS proxy_host:proxy_port";
+}
+```
+将以上代码中的`proxy_host`替换成 SOCKS服务器实际的IP地址
+将以上代码中的`proxy_port`替换成 SOCKS服务器实际的端口号
+
+然后保存为 `proxy.pac`，并且放到一个文件服务器上，得到他的访问地址，例如：`https://eeve.me/proxy.pac`
+
+填写iPhone上的 `URL`配置项为上面的文件访问地址，就可以使用SOCKS代理了
+
+## HTTP代理配置方法
+
+请将HTTP代理模式设置为`手动`，然后在填入HTTP代理服务器的地址（ 需写上http协议前缀: http:// or https:// ）和端口号即可
+
+
+## 参考资料
+- [https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8](https://zh.wikipedia.org/wiki/%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8)
+- [https://zh.wikipedia.org/zh/%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE](https://zh.wikipedia.org/zh/%E4%BB%A3%E7%90%86%E8%87%AA%E5%8A%A8%E9%85%8D%E7%BD%AE)
+
+
 
