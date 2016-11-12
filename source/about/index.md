@@ -25,6 +25,7 @@ var eeve = function(){
         'jQuery & Zepto',
         'Bootstrap',
         'AngularJS',
+        'Vue.js',
         'RequireJS',
         'SeaJS',
         'Express',
@@ -49,6 +50,7 @@ var eeve = function(){
 - jQuery & Zepto
 - Bootstrap
 - AngularJS
+- Vue.js
 - RequireJS
 - SeaJS
 - Express
