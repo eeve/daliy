@@ -7,7 +7,7 @@
     "version": "3.3.7"
   },
   "scripts": {
-    "prestart": "cd themes/five && npm run build && cd ../../ && hexo clean && hexo generate",
+    "prestart": "cd themes/six && npm run build && cd ../../ && hexo clean && hexo generate",
     "start": "gulp"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
   "devDependencies": {
     "gulp-clean": "^0.3.2",
     "gulp-scp": "^0.0.3",
+    "gulp-shell": "^0.6.3",
     "gulp-ssh": "^0.6.0",
     "gulp-zip": "^3.2.0",
     "run-sequence": "^1.2.2"

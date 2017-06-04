@@ -3,17 +3,20 @@ var clean = require('gulp-clean');
 var zip = require('gulp-zip');
 var scp = require('gulp-scp');
 var GulpSSH = require('gulp-ssh');
+var GulpShell = require('gulp-shell');
 var fs = require('fs');
 var runSequence = require('run-sequence');
 
 var serverIP = '192.168.2.66';
 var serverPort = 22;
+var serverUser = 'eeve';
+var keyFile = '/Users/eeve/.ssh/id_rsa_pi';
 
 var config = {
   host: serverIP,
   port: serverPort,
-  username: 'eeve',
-  privateKey: fs.readFileSync('/Users/eeve/.ssh/id_rsa_pi')
+  username: serverUser,
+  privateKey: fs.readFileSync(keyFile)
 }
 var gulpSSH = new GulpSSH({
   ignoreErrors: false,
@@ -31,24 +34,21 @@ gulp.task('zip', () => {
       .pipe(gulp.dest('dist'));
 });
 
-gulp.task('scp', function () {
-    return gulp.src('dist/blog.archive.zip')
-      .pipe(scp({
-        host: serverIP,
-        port: serverPort,
-        user: 'eeve',
-        path: '/var/www/archives'
-      }));
+gulp.task('shell', () => {
+  return gulp.src('dist/blog.archive.zip')
+    .pipe(GulpShell([
+      `scp -o StrictHostKeyChecking=no -P ${serverPort} -i ${keyFile} dist/blog.archive.zip ${serverUser}@${serverIP}:/var/www/archives`
+    ]))
 });
 
 gulp.task('exec', function () {
   return gulpSSH
   	.shell([
-      '/bin/bash /var/www/deploy.sh'
+      `/bin/bash /var/www/deploy.sh`,
       ], { filePath: 'shell.log' })
     .pipe(gulp.dest('dist'))
 });
 
 gulp.task('default', function(callback){
-  runSequence('clean', 'zip', 'scp' , 'exec', callback);
+  runSequence('clean', 'zip' , 'shell', 'exec', callback);
 });
