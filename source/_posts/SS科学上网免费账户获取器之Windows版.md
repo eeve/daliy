@@ -21,15 +21,15 @@ categories:
 - 可生成SS配置二维码
 
 ## 截屏预览
-{% asset_img step1.png %}
+{% qn_img step1.png %}
 
 <br/>
 
-{% asset_img step2.png %}
+{% qn_img step2.png %}
 
 <br/>
 
-{% asset_img step3.png %}
+{% qn_img step3.png %}
 
 
 ## 安装ShadowsocksGUI

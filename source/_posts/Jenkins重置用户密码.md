@@ -21,14 +21,14 @@ cd /var/lib/jenkins
 ll
 ```
 
-{% asset_img 1.png %}
+{% qn_img 1.png %}
 
 可以看到有一个users目录，此目录就包含了你的Jenkins所有用户的配置信息，进入其中
 ```bash
 cd users
 ll
 ```
-{% asset_img 2.png %}
+{% qn_img 2.png %}
 
 
 可以看到所有的用户名字对应的文件夹,进入需要修改的用户文件夹，例如：jk
@@ -36,7 +36,7 @@ ll
 cd jk
 ll
 ```
-{% asset_img 3.png %}
+{% qn_img 3.png %}
 
 可以看到，只有一个config.xml配置文件，可以先备份一下
 ```bash
@@ -47,7 +47,7 @@ cp -a config.xml config.xml.bak
 ```bash
 vi config.xml
 ```
-{% asset_img 4.png %}
+{% qn_img 4.png %}
 
 ## 重置密码
 在config.xml配置文件中，找到 `<passwordHash>` 节点，并将其中的值修改为：
@@ -70,14 +70,14 @@ rm /var/lib/jenkins/users/xxx/config.xml.bak
 ## 使用Jenkins界面修改密码
 如果你想将111111修改为自己想要的密码的话，请使用111111登录Jenkins，然后继续下面步骤：
 登录之后在有上角找到自己的用户名，并点击：
-{% asset_img 2.1.png %}
+{% qn_img 2.1.png %}
 
 
 在接下来的页面左侧点击设置链接，进入设置页面
-{% asset_img 2.2.png %}
+{% qn_img 2.2.png %}
 
 在设置页面中找到`密码`项，输入新密码，然后点击页面最下方的Save按钮即可。
-{% asset_img 2.3.png %}
+{% qn_img 2.3.png %}
 
 
 

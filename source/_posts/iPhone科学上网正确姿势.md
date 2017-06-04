@@ -14,7 +14,7 @@ categories:
 <!-- more -->
 
 其实翻墙无非就是使用代理服务器，利用一台没有被墙的、并且能够自由访问互联网的机器来上网。
-{% asset_img 350px-Schematic_Proxy_Server.png 350px-Schematic_Proxy_Server.png %}
+{% qn_img 350px-Schematic_Proxy_Server.png 350px-Schematic_Proxy_Server.png %}
 > 图解：左边和右边的电脑在通讯时候，需要经过中间的电脑中转，而中间的那部电脑就是代理服务器。
 
 
@@ -37,7 +37,7 @@ categories:
 我们必须利用其中一种代理方式来实现在iPhone上科学上网，目前iPhone支持HTTP与SOCKS这种方式。
 
 > 注意：在iPhone设备的 `设置` -> `无线局域网` 的详情下只能看到`HTTP代理`，并且可以看到iPhone的HTTP代理支持两种模式，即：手动，自动。如下图：
-{% asset_img iphone-settings-wlan-detail.png %}
+{% qn_img iphone-settings-wlan-detail.png %}
 
 ## SOCKS代理配置方法
 

@@ -6,8 +6,6 @@ meta: false
 license: true
 ---
 
-{% asset_img logo.png logo.png %}
-
 ```js
 class FullStackDeveloper extends Developer {
     constructor(gender) {
