@@ -6,14 +6,14 @@ var GulpSSH = require('gulp-ssh');
 var fs = require('fs');
 var runSequence = require('run-sequence');
 
-var serverIP = '162.211.226.47';
-var serverPort = 28016;
+var serverIP = '192.168.2.66';
+var serverPort = 22;
 
 var config = {
   host: serverIP,
   port: serverPort,
-  username: 'root',
-  privateKey: fs.readFileSync('/Users/eeve/.ssh/id_rsa')
+  username: 'eeve',
+  privateKey: fs.readFileSync('/Users/eeve/.ssh/id_rsa_pi')
 }
 var gulpSSH = new GulpSSH({
   ignoreErrors: false,
@@ -36,21 +36,17 @@ gulp.task('scp', function () {
       .pipe(scp({
         host: serverIP,
         port: serverPort,
-        user: 'root',
-        path: '/opt/web'
+        user: 'eeve',
+        path: '/var/www/archives'
       }));
 });
 
 gulp.task('exec', function () {
   return gulpSSH
   	.shell([
-      'cd /opt/web',
-      'rm -rf ./hexo-static-blog',
-      'rm -rf /var/www/eeve.me',
-      'unzip -x ./blog.archive.zip -d /var/www/eeve.me',
-      'rm -rf ./blog.archive.zip'
+      '/bin/bash /var/www/deploy.sh'
       ], { filePath: 'shell.log' })
-    .pipe(gulp.dest('dist/logs'))
+    .pipe(gulp.dest('dist'))
 });
 
 gulp.task('default', function(callback){

@@ -4,14 +4,15 @@
   "version": "0.0.1",
   "private": true,
   "hexo": {
-    "version": "3.2.2"
+    "version": "3.3.7"
   },
   "scripts": {
     "prestart": "cd themes/five && npm run build && cd ../../ && hexo clean && hexo generate",
     "start": "gulp"
   },
   "dependencies": {
-    "hexo": "^3.2.0",
+    "hexo": "^3.3.7",
+    "hexo-cli": "^1.0.3",
     "hexo-generator-archive": "^0.1.4",
     "hexo-generator-category": "^0.1.3",
     "hexo-generator-feed": "^1.1.0",
@@ -20,7 +21,7 @@
     "hexo-generator-tag": "^0.2.0",
     "hexo-renderer-ejs": "^0.2.0",
     "hexo-renderer-jade": "^0.3.0",
-    "hexo-renderer-less": "^0.1.3",
+    "hexo-renderer-less": "^0.2.0",
     "hexo-renderer-marked": "^0.2.10",
     "hexo-renderer-stylus": "^0.3.1",
     "hexo-ruby-character": "^1.0.6",
