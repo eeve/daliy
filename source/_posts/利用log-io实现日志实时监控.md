@@ -39,7 +39,7 @@ Node.js的安装方法，请参考我之前的一篇文章：[node环境的安�
 
 安装好后，查看版本号，我的是`node:v0.10.35` `npm:1.4.28`
 
-![](http://7xjo8q.com1.z0.glb.clouddn.com/image/1/72/c0f4ec3ecac05b2e326e78f4ee5cf.png)
+{% qn_img c0f4ec3ecac05b2e326e78f4ee5cf.png %}
 
 #### 安装 Log.io
 Log.io是一个node package。 里面包含了 `log server` 和 `log harvester`
@@ -52,8 +52,9 @@ $ sudo npm install log.io -g --prefix=/usr/local
 
 安装的时间稍微有点长，视网络情况而定，慢的话稍微等等就好了，实在不行可能就需要调整正确的上网姿势了。
 
-![](http://7xjo8q.com1.z0.glb.clouddn.com/image/6/32/c3fade1d86bcfd12c02631583464a.png)
-![](http://7xjo8q.com1.z0.glb.clouddn.com/image/2/4d/a3a8d97f283290e3b481c8aa92d2f.png)
+{% qn_img c3fade1d86bcfd12c02631583464a.png %}
+
+{% qn_img a3a8d97f283290e3b481c8aa92d2f.png %}
 
 ## 在服务器B配置和启动harvester
 
@@ -108,7 +109,7 @@ $ sudo log.io-harvester start
 ## 测试一把
 
 我已经安装好了，手动更新日志文件，可以看到web监控页面是可以正确监听到的。
-![](http://7xjo8q.com1.z0.glb.clouddn.com/image/d/31/789a3ac37b457908de5899fb9fecc.png)
+{% qn_img 789a3ac37b457908de5899fb9fecc.png %}
 
 
 ## Learn more

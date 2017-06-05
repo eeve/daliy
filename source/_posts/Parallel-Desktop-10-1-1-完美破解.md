@@ -17,9 +17,9 @@ Parallels Desktop for Mac号称是mac下最好用的虚拟机（试过的人都�
 
 可以看看我已经安装好了的：
 
-![](http://7xjo8q.com1.z0.glb.clouddn.com/image/c/10/de2950ee27fd897f4c52a58f0cf12.png)
+{% qn_img de2950ee27fd897f4c52a58f0cf12.png %}
 
-![](http://7xjo8q.com1.z0.glb.clouddn.com/image/e/36/165e7040b819d010761965c404408.png)
+{% qn_img 165e7040b819d010761965c404408.png %}
 
 ## 下载地址
 [https://mega.co.nz/#!egJVUbLS!lvIOCRzXAg10YQGxrGfrbzLKQFpDQyRY-p-lZAjiPT4](https://mega.co.nz/#!egJVUbLS!lvIOCRzXAg10YQGxrGfrbzLKQFpDQyRY-p-lZAjiPT4)
