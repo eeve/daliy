@@ -6,11 +6,12 @@ var GulpSSH = require('gulp-ssh');
 var GulpShell = require('gulp-shell');
 var fs = require('fs');
 var runSequence = require('run-sequence');
+var process = require('process');
 
 var serverIP = '192.168.2.66';
 var serverPort = 22;
 var serverUser = 'eeve';
-var keyFile = '/Users/eeve/.ssh/id_rsa_pi';
+var keyFile = process.platform == 'win32' ? 'C:/Users/eeve/.ssh/id_rsa_pi' : '~/.ssh/id_rsa_pi';
 
 var config = {
   host: serverIP,

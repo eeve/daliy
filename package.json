@@ -30,6 +30,7 @@
     "hexo-server": "^0.2.0"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-scp": "^0.0.3",
     "gulp-shell": "^0.6.3",
