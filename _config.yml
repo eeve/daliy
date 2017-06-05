@@ -97,6 +97,7 @@ qiniu:
   ignoring_log: true
   ignoring_files:
     - '**/*.md'
+    - '**/.DS_Store'
   update_exist: true
   image: 
     folder: _posts

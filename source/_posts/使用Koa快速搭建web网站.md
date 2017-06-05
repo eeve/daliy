@@ -33,7 +33,7 @@ npm install koa --save
 ```
 
 ## 新建项目启动入口文件app.js,并写入如下内容
-```
+```js
 'use strict'
 const koa = require('koa');
 const app = koa();

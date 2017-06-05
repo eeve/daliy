@@ -8,7 +8,8 @@
   },
   "scripts": {
     "prestart": "cd themes/six && npm run build && cd ../../ && hexo clean && hexo generate",
-    "start": "gulp"
+    "start": "gulp",
+    "dev": "hexo clean && hexo s --debug"
   },
   "dependencies": {
     "hexo": "^3.3.7",

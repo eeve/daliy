@@ -39,7 +39,7 @@ Git是一个免费的开源分布式版本控制系统，本文可以帮助你�
 * 第二个是 暂存区（Index），它像个缓存区域，临时保存你的改动；
 * 最后是 HEAD，它指向你最后一次提交的结果。 
 
-![](http://quickjs.qiniudn.com/image/3/fa/26ba3dda6635acf0a8345b9e3dcbb.png)
+{% qn_img trees.png %}
 
 
 ### 添加和提交
@@ -73,7 +73,7 @@ Git是一个免费的开源分布式版本控制系统，本文可以帮助你�
 ### 分支
 
 分支是用来将特性开发绝缘开来的。在你创建仓库的时候，master 是“默认的”分支。在其他分支上进行开发，完成后再将它们合并到主分支上。 
-![](http://quickjs.qiniudn.com/image/d/33/b5e800b2ce368c4dae5d542ce5361.png)
+{% qn_img branches.png %}
 
 创建一个叫做“feature_x”的分支，并切换过去：
 

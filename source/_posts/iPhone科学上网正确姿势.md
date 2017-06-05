@@ -37,6 +37,7 @@ categories:
 我们必须利用其中一种代理方式来实现在iPhone上科学上网，目前iPhone支持HTTP与SOCKS这种方式。
 
 > 注意：在iPhone设备的 `设置` -> `无线局域网` 的详情下只能看到`HTTP代理`，并且可以看到iPhone的HTTP代理支持两种模式，即：手动，自动。如下图：
+
 {% qn_img iphone-settings-wlan-detail.png %}
 
 ## SOCKS代理配置方法
@@ -52,7 +53,9 @@ function FindProxyForURL(url, host) {
     return "SOCKS proxy_host:proxy_port";
 }
 ```
+
 将以上代码中的`proxy_host`替换成 SOCKS服务器实际的IP地址
+
 将以上代码中的`proxy_port`替换成 SOCKS服务器实际的端口号
 
 然后保存为 `proxy.pac`，并且放到一个文件服务器上，得到他的访问地址，例如：`https://eeve.me/proxy.pac`
