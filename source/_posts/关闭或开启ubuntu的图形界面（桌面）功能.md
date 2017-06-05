@@ -2,7 +2,7 @@
 title: 关闭或开启ubuntu的图形界面（桌面）功能
 toc: false
 comment: true
-date: 2017-06-05 15:18:06
+date: 2016-07-29 15:18:06
 meta:
 tags:
 categories:

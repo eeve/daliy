@@ -2,7 +2,7 @@
 title: ubuntu14.04安装完samba后windows不能正常打开的解决方案
 toc: false
 comment: true
-date: 2017-06-05 16:12:39
+date: 2016-07-28 16:12:39
 meta:
 tags:
 categories:

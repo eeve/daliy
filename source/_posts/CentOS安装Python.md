@@ -2,7 +2,7 @@
 title: CentOS安装Python
 toc: false
 comment: true
-date: 2017-06-05 16:04:28
+date: 2016-08-05 16:04:28
 meta:
 tags:
 categories:

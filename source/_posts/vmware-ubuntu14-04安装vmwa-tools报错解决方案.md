@@ -2,7 +2,7 @@
 title: vmware ubuntu14.04安装vmwa_tools报错解决方案
 toc: false
 comment: true
-date: 2017-06-05 16:15:31
+date: 2016-07-28 17:15:31
 meta:
 tags:
 categories:

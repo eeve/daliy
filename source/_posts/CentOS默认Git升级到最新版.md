@@ -2,9 +2,9 @@
 title: CentOS默认Git升级到最新版
 toc: false
 comment: true
-date: 2017-06-05 16:19:38
-meta:
-tags:
+date: 2016-06-05 16:19:38
+meta: 
+tags: ['CentOS']
 categories:
 ---
 
