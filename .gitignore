@@ -11,3 +11,5 @@ public/
 themes
 dist/
 .history
+qiniu.json
+config.js
